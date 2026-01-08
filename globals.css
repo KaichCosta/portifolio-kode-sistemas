@@ -1,0 +1,74 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+/* 1. VARIÁVEIS DE CORES E FONTES (Fácil de mudar pro próximo cliente) */
+:root {
+    --cor-1: #4a90e2;
+    --cor2: #2ecc71;
+    --cor-texto: #333333;
+    --: #f9f9f9;
+    --fonte-principal: 'Inter', sans-serif; /* Exemplo de fonte */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. COMPORTAMENTO DE SCROLL (Efeito suave ao clicar no menu) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 3. TIPOGRAFIA RESPONSIVA */
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    line-height: 1.6; /* Melhora muito a leitura */
+    background-color: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 4. IMAGENS E MÍDIAS (Regra de Ouro) */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 5. UTILITÁRIOS (Classes rápidas para usar no HTML) */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 6. BOTÕES (Estilo base para LP) */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Efeito de levante */
+    filter: brightness(1.1);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
