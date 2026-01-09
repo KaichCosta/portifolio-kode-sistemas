@@ -1,30 +1,144 @@
-/*SEÇÃO TERMINAL*/
-.terminal-window {
-    background: #0d1416f8;
-    backdrop-filter: blur(10px); /* O efeito que você queria */
-    border: 1px solid rgba(0, 255, 0, 0.2);
-    border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    font-family: 'Fira Code', monospace;
-    overflow: hidden;
-    width: 375px;
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    box-shadow: 0 0 10px 0 rgb(from var(--cor1) r g b / 0.1);
+    background-color: rgb(from var(--cor2) r g b / 0.3); /*glass*/
+    backdrop-filter: blur(2px); /*glass*/
+    -webkit-backdrop-filter: blur(2px); /*glass*/
 }
 
-.terminal-header {
-    background: #0d1416f3;
+header > img {
+    max-width: 120px;
+}
+
+nav > a {
+    color: var(--cor-texto);
+    margin-right: 1.5rem;
+    transition: transform 0.1s ease-in-out;
+    display: inline-block;
+}
+
+nav > a:last-child {
+    margin-right: auto;
+}
+
+nav > a:hover {
+    color: var(--cor1);
+    transform: scale(1.05);
+}
+
+nav > a:active {
+    color: var(--cor-texto);
+    transform: none;
+}
+
+#cabecalho-mobile {
+    display: none;
+}
+
+.container {
+    background-color: var(--cor2);
+}
+
+#inicio {
+    background-color: var(--cor2);
+    background-image: linear-gradient(to bottom,
+    rgb(from var(--cor1) r g b / 0) 0%,
+    rgb(from var(--cor1) r g b / 0.25) 50%,
+    rgb(from var(--cor1) r g b / 0) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7.5rem 4rem;
+    min-height: 100vh;
+}
+
+.secao-hero {
+    width: 60%;
+    text-align: center;
+}
+
+.profissao {
+    font-size: 0.75rem;
+    text-align: center;
+    color: var(--cor1);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.secao-hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+.destaque {
+    color: var(--cor1);
+    text-shadow: 2px 1px 10px rgb(from var(--cor1) r g b / 0.8);
+}
+
+.secao-hero h2 {
+    color: var(cor-descricao);
+    font-weight: 200;
+    margin: 2rem 0;
+}
+
+#ver-projetos-btn {
+    color: var(--cor2);
+    background-color: var(--cor1);
+}
+
+#entrar-contato-btn {
+    color: var(--cor-texto);
+}
+
+.redes-contato {
+    margin: 2rem 0 0 0;
+}
+
+.redes-contato a {
+    box-shadow: none;
+}
+
+.redes-contato i {
+    color: var(--cor1);
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.secao-terminal {
+    width: 40%;
+}
+/*TERMINAL*/
+.janela-terminal {
+    background: rgb(from var(--cor2) r g b / 0.7);
+    border-radius: 12px;
+    font-family: 'Fira Code', monospace;
+    overflow: hidden;
+    width: 382px;
+}
+
+.cabecalho-terminal {
+    background: rgb(from var(--cor2) r g b / 0.9);
     padding: 10px;
     display: flex;
     align-items: center;
 }
 
-.dot { height: 10px; width: 10px; border-radius: 50%; margin-right: 6px; }
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
+.ponto { height: 10px; width: 10px; border-radius: 50%; margin-right: 6px; }
+.vermelho { background: #ff5f56; }
+.amarelo { background: #ffbd2e; }
+.verde { background: #27c93f; }
 
-.terminal-body { padding: 20px; color: #bdbdbd; font-size: 14px; }
-.terminal-title { color: #f5f5f5; }
-.prompt { color: #39FF15; } /* Verde Neon */
-.success { color: #39FF15; font-weight: bold; }
+.corpo-terminal { padding: 20px; color: #bdbdbd; font-size: 14px; }
+.titulo-terminal { color: #f5f5f5; }
+.comando { color: var(--cor1); } /* Verde Neon */
+.sucesso { color: var(--cor1); font-weight: bold; }
 /*============================================*/
 /*============================================*/

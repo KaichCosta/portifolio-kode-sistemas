@@ -1,12 +1,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* 1. VARIÁVEIS DE CORES E FONTES (Fácil de mudar pro próximo cliente) */
 :root {
-    --cor-1: #4a90e2;
-    --cor2: #2ecc71;
-    --cor-texto: #333333;
-    --: #f9f9f9;
-    --fonte-principal: 'Inter', sans-serif; /* Exemplo de fonte */
+    --cor1: #39ff15;
+    --cor2: #0d1416;
+    --cor-texto: #f5f5f5;
+    --cor-descricao: #d8d8d8;
+    --fonte-principal: 'Inter', sans-serif;
 }
 
 * {
@@ -24,12 +26,13 @@ html {
 body {
     font-family: var(--fonte-principal);
     color: var(--cor-texto);
-    line-height: 1.6; /* Melhora muito a leitura */
+    line-height: 1.2; /* Melhora muito a leitura */
     background-color: gray;
 }
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* 4. IMAGENS E MÍDIAS (Regra de Ouro) */
@@ -41,8 +44,7 @@ img, video {
 
 /* 5. UTILITÁRIOS (Classes rápidas para usar no HTML) */
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -55,8 +57,8 @@ img, video {
 /* 6. BOTÕES (Estilo base para LP) */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -66,9 +68,18 @@ img, video {
 
 .btn:hover {
     transform: translateY(-2px); /* Efeito de levante */
-    filter: brightness(1.1);
+    filter: brightness(1.2);
 }
 
 .btn:active {
     transform: translateY(0);
+}
+
+.efeito-glass2 {
+    
+    border: 1px solid rgb(from var(--cor1) r g b / 0.3); /*glass*/
+    box-shadow: 0 2px 16px 0 rgb(from var(--cor1) r g b / 0.1); /*glass*/
+    background-color: rgb(from var(--cor2) r g b / 0.3); /*glass*/
+    backdrop-filter: blur(2px); /*glass*/
+    -webkit-backdrop-filter: blur(2px); /*glass*/
 }
