@@ -74,11 +74,10 @@ img, video {
 .btn:active {
     transform: translateY(0);
 }
-
 .efeito-glass {
     border: 1px solid rgb(from var(--cor1) r g b / 0.3); /*glass*/
     box-shadow: 0 2px 16px 0 rgb(from var(--cor1) r g b / 0.1); /*glass*/
     background-color: rgb(from var(--cor2) r g b / 0.3); /*glass*/
-    backdrop-filter: blur(2px); /*glass*/
     -webkit-backdrop-filter: blur(2px); /*glass*/
+    backdrop-filter: blur(2px); /*glass*/
 }
