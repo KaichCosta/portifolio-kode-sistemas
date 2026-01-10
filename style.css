@@ -13,9 +13,7 @@ header {
     -webkit-backdrop-filter: blur(2px); /*glass*/
 }
 
-header > img {
-    max-width: 120px;
-}
+header > img {max-width: 120px;}
 
 nav > a {
     color: var(--cor-texto);
@@ -24,27 +22,16 @@ nav > a {
     display: inline-block;
 }
 
-nav > a:last-child {
-    margin-right: auto;
+nav > a:last-child {margin-right: auto;}
+
+nav > a:hover {color: var(--cor1); transform: scale(1.05);
 }
 
-nav > a:hover {
-    color: var(--cor1);
-    transform: scale(1.05);
-}
+nav > a:active {color: var(--cor-texto);transform: none;}
 
-nav > a:active {
-    color: var(--cor-texto);
-    transform: none;
-}
+#cabecalho-mobile {display: none;}
 
-#cabecalho-mobile {
-    display: none;
-}
-
-.container {
-    background-color: var(--cor2);
-}
+.container {background-color: var(--cor2);}
 
 #inicio {
     background-color: var(--cor2);
@@ -60,9 +47,7 @@ nav > a:active {
 }
 
 .secao-hero {
-    width: 60%;
-    text-align: center;
-}
+    width: 60%; text-align: center; margin: auto;}
 
 .profissao {
     font-size: 0.75rem;
@@ -92,18 +77,16 @@ nav > a:active {
 #ver-projetos-btn {
     color: var(--cor2);
     background-color: var(--cor1);
+    margin: 0 0.5rem 1rem 0;
 }
 
 #entrar-contato-btn {
-    color: var(--cor-texto);
-}
-
-.redes-contato {
-    margin: 2rem 0 0 0;
-}
+    color: var(--cor-texto);margin-bottom: 2rem;}
 
 .redes-contato a {
     box-shadow: none;
+    padding: 10px;
+    margin-bottom: 1rem;
 }
 
 .redes-contato i {
@@ -112,9 +95,7 @@ nav > a:active {
     font-weight: 300;
 }
 
-.secao-terminal {
-    width: 40%;
-}
+.secao-terminal {width: 40%; margin: auto;}
 /*TERMINAL*/
 .janela-terminal {
     background: rgb(from var(--cor2) r g b / 0.7);
@@ -122,6 +103,7 @@ nav > a:active {
     font-family: 'Fira Code', monospace;
     overflow: hidden;
     width: 382px;
+    margin: 0 auto;
 }
 
 .cabecalho-terminal {
@@ -138,7 +120,39 @@ nav > a:active {
 
 .corpo-terminal { padding: 20px; color: #bdbdbd; font-size: 14px; }
 .titulo-terminal { color: #f5f5f5; }
-.comando { color: var(--cor1); } /* Verde Neon */
+.comando { color: var(--cor1); }
 .sucesso { color: var(--cor1); font-weight: bold; }
 /*============================================*/
 /*============================================*/
+
+@media (max-width: 450px) {
+    #inicio {flex-direction: column; padding: 4rem 2rem;}
+
+    .secao-hero, .secao-terminal {width: 100%; align-items: center;}
+
+    .secao-hero h1 {font-size: 3rem;}
+
+    #quebra-h1{display: none;}
+
+    #quebra-h2{display: none;}
+
+    #ver-projetos-btn, #entrar-contato-btn {padding: 8px 10px;}
+
+    .janela-terminal {max-width: 95%;}
+
+    .cabecalho-terminal {font-size: 0.9rem;}
+
+    .corpo-terminal {font-size: 0.8rem; line-height: 1.4;}
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    #inicio {flex-direction: column; padding: 4rem 2rem;}
+
+    .secao-hero, .secao-terminal {width: 100%; align-items: center;}
+
+    .secao-hero h1 {font-size: 3.5rem;}
+
+    #quebra-h1{display: none;}
+}
+
+@media (min-width: 769px) and (max-width: 1299px) {#quebra-h1{display: none;}}
