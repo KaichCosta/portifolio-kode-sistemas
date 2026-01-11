@@ -10,7 +10,7 @@
     border: none;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px 0 rgb(from var(--cor1) r g b / 0.3);  
+    box-shadow: 0 0 10px 0 rgb(from var(--cor1) r g b / 0.1);  
 }
 
 #nav-menu a, #nav-menu-mobile a {
@@ -33,7 +33,7 @@
     padding: 15px 5%;
     position: fixed;
     width: 100%;
-    z-index: 3;  
+    z-index: 2;  
     border: none;
     box-shadow: none;
 }
@@ -51,7 +51,7 @@
     padding: 10px;
     text-align: center;
     border: none;
-    box-shadow: 0 5px 10px 0 rgb(from var(--cor1) r g b / 0.3);
+    box-shadow: 0 15px 15px 0 rgb(from var(--cor1) r g b / 0.1);
 }
 
 #nav-menu-mobile.active {
@@ -60,7 +60,6 @@
 
 .menu-toggle {
     color: var(--cor-texto);
-    font-size: 1rem;
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -69,17 +68,22 @@
 
 .container {background-color: var(--cor2);}
 
-#inicio {
+section {
     background-color: var(--cor2);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 7.5rem 8rem;
+    min-height: 100vh;
+}
+
+#inicio {
     background-image: linear-gradient(to bottom,
     rgb(from var(--cor1) r g b / 0) 0%,
     rgb(from var(--cor1) r g b / 0.25) 50%,
     rgb(from var(--cor1) r g b / 0) 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 7.5rem 4rem;
-    min-height: 100vh;
 }
 
 .secao-hero {
@@ -96,7 +100,6 @@
 .secao-hero h1 {
     font-size: 4rem;
     font-weight: bold;
-    color: var(--cor-texto);
 }
 
 .destaque {
@@ -105,9 +108,10 @@
 }
 
 .secao-hero h2 {
+    font-size: 1rem;
     color: var(cor-descricao);
     font-weight: 200;
-    margin: 2rem 0;
+    margin: 0.2rem 0 1.5rem;
 }
 
 #ver-projetos-btn {
@@ -127,7 +131,7 @@
 
 .redes-contato i {
     color: var(--cor1);
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 300;
 }
 
@@ -160,6 +164,93 @@
 .sucesso { color: var(--cor1); font-weight: bold; }
 /*============================================*/
 /*============================================*/
+
+#sobre {
+    background-image: linear-gradient(to right,
+    rgb(from var(--cor1) r g b / 0) 0%,
+    rgb(from var(--cor1) r g b / 0.25) 50%,
+    rgb(from var(--cor1) r g b / 0) 100%);
+    justify-content: center;
+    margin: auto;
+}
+
+.secao-sobre p {
+    padding: 2rem 1rem;
+    margin: 2.2rem 0;
+    border-radius: 1.25rem;
+    line-height: 1.6;
+
+}
+
+#secao-sobre-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.sobre-card {
+    width: auto;
+    height: auto;
+    border-radius: 1.25rem;
+    padding: 0.937rem;
+}
+
+.sobre-card:hover {
+    transform: translateY(-2px); /* Efeito de levante */
+    filter: brightness(1.2);
+}
+
+.sobre-card:active {transform: translateY(0);}
+
+.sobre-card i{
+    color: var(--cor1);
+    font-size: 1.375rem;
+    background-color: rgb(from var(--cor1) r g b / 0.1);
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+.sobre-card h3 {
+    font-weight: bold;
+    margin: 0.937rem 0 0.937rem;
+}
+
+.sobre-card p {
+    color: var(--cor-descricao);
+    padding: 0;
+    font-size: 0.75rem;
+}
+
+/*.secao-stacks {}*/
+
+.secao-stacks-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: clamp(1rem, 2.5vw, 2rem);    
+}
+
+.stack-card {
+    background-color: rgb(from var(--cor1) r g b / 0.1);
+    border-radius: 1.25rem 0 0 0;
+}
+
+.stack-card:hover {
+    transform: translateY(-2px); /* Efeito de levante */
+    filter: brightness(1.2);
+}
+
+.stack-card:active { transform: translateY(0);}
+
+#inicio, #sobre {display: none;}
+
+
+/*trocar fundo do site para algo no estilo section {
+    background: radial-gradient(circle at center, rgba(57, 255, 21, 0.05) 0%, #080808 80%);
+}*/
+
 
 @media (max-width: 450px) {
     #cabecalho {display: none;}
