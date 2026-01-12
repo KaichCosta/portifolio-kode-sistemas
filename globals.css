@@ -27,7 +27,7 @@ body {
     font-family: var(--fonte-principal);
     color: var(--cor-texto);
     line-height: 1.2; /* Melhora muito a leitura */
-    background-color: gray;
+    background-color: var(--cor27777);
 }
 
 h2 {font-size: 3rem; font-weight: bold;}
@@ -87,6 +87,7 @@ img, video {
 .efeito-sublinhado {
     position: relative; /* Essencial para posicionar o sublinhado ::after */
     display: inline-block;
+    text-align: center;
 }
 
 .efeito-sublinhado::after {
@@ -111,4 +112,6 @@ img, video {
     font-size: 0.75rem;
     color: var(--cor-descricao);
     font-weight: 300;
+    margin: 0 0 2.2rem;
+    text-align: center;
 }
