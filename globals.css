@@ -85,7 +85,7 @@ img, video {
 }
 
 .efeito-sublinhado {
-    position: relative; /* Essencial para posicionar o sublinhado ::after */
+    position: relative;
     display: inline-block;
     text-align: center;
 }
@@ -94,7 +94,7 @@ img, video {
     content: '';
     position: absolute;
     width: 5rem;
-    height: 3px; /* Espessura da linha */
+    height: 3px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -112,6 +112,6 @@ img, video {
     font-size: 0.75rem;
     color: var(--cor-descricao);
     font-weight: 300;
-    margin: 0 0 2.2rem;
     text-align: center;
+    margin: 1rem 0 1.5rem;
 }

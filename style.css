@@ -71,7 +71,7 @@
 section {
     background-color: var(--cor2);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 7.5rem 8rem;
@@ -84,6 +84,7 @@ section {
     rgb(from var(--cor1) r g b / 0.25) 50%,
     rgb(from var(--cor1) r g b / 0) 100%);
     padding: 7.5rem 4rem;
+    flex-direction: row;
 }
 
 .secao-hero {
@@ -176,7 +177,7 @@ section {
 
 .secao-sobre p {
     padding: 2rem 1rem;
-    margin: 2.2rem 0;
+    margin: 6rem 0 3.125rem;
     border-radius: 1.25rem;
     line-height: 1.6;
 
@@ -215,14 +216,17 @@ section {
 
 .sobre-card h3 {
     font-weight: bold;
-    margin: 0.937rem 0 0.937rem;
+    margin: 0.937rem 0;
 }
 
 .sobre-card p {
     color: var(--cor-descricao);
     padding: 0;
     font-size: 0.75rem;
+    margin: 0;
 }
+
+#tecnologias {min-height: 50vh;}
 
 #secao-stacks-cards {
     display: grid;
@@ -230,7 +234,7 @@ section {
     grid-template-columns: repeat(4, 7.5rem);
     gap: 1.5rem;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin: 6rem 0 0;
 
 }
 
@@ -264,7 +268,6 @@ section {
     margin: 1rem;
 }
 
-
 /*trocar fundo do site para algo no estilo section {
     background: radial-gradient(circle at center, rgba(57, 255, 21, 0.05) 0%, #080808 80%);
 }*/
@@ -294,13 +297,9 @@ section {
 
     .corpo-terminal {font-size: 0.8rem; line-height: 1.4;}
 
-    #secao-stacks-cards {grid-template-columns: repeat(2, 5rem);}/*diminuir 1/3 dos cards*/
+    .efeito-sublinhado {font-size: 2.5rem;}
 
-    .stack-card {height: 5rem; border-radius: .83rem 0 0 0;}
-
-    .stack-card h4 {font-size: .66rem}
-
-    .stack-card i {font-size: 2.06rem; margin: .66rem;}
+    #secao-stacks-cards {grid-template-columns: repeat(2, 7.5rem);}
     
     .descricao {margin-bottom: 1rem;}
 
@@ -320,20 +319,11 @@ section {
     .secao-hero h1 {font-size: 3.5rem;}
 
     #quebra-h1{display: none;}
-
-    .efeito-sublinhado {
-        font-size: 2.5rem;
-    }
-
-    #secao-stacks-cards {grid-template-columns: repeat(4, 5rem);}/*diminuir 1/3 dos cards*/
-
-    .stack-card {height: 5rem; border-radius: .83rem 0 0 0;}
-
-    .stack-card h4 {font-size: .66rem}
-
-    .stack-card i {font-size: 2.06rem; margin: .66rem;}
     
     .descricao {margin-bottom: 1rem;}
+
 }
+
+@media (min-width: 451px) and (max-width: 710px) {#secao-stacks-cards {grid-template-columns: repeat(3, 7.5rem);}}
 
 @media (min-width: 769px) and (max-width: 1299px) {#quebra-h1{display: none;}}
