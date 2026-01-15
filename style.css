@@ -272,30 +272,29 @@ section {
 #secao-projetos-cards {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 25rem);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     justify-content: center;
-    height: auto;
 }
 
 .projeto-card {
     border-radius: 1.25rem;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .projeto-card:hover {
     transform: translateY(-2px); /* Efeito de levante */
-    filter: brightness(1.2);
+    filter: brightness(1.05);
 }
 
 .projeto-card:active {transform: translateY(0);}
 
-.fundo-imagem-card {
-    overflow: hidden;
-}
+.fundo-imagem-card {overflow: hidden;}
 
 .fundo-imagem-card img {
     transition: all 0.3s ease;
+    width: 1100px;
 }
 
 .fundo-imagem-card img:hover {
@@ -338,6 +337,9 @@ section {
 /*trocar fundo do site para algo no estilo section {
     background: radial-gradient(circle at center, rgba(57, 255, 21, 0.05) 0%, #080808 80%);
 }*/
+
+
+
 
 @media (max-width: 450px) {
     #cabecalho {display: none;}
