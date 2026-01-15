@@ -267,6 +267,73 @@ section {
     text-align: center;
     margin: 1rem;
 }
+#inicio, #tecnologias {display: none;}
+
+#secao-projetos-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 25rem);
+    gap: 1.5rem;
+    justify-content: center;
+    height: auto;
+}
+
+.projeto-card {
+    border-radius: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-2px); /* Efeito de levante */
+    filter: brightness(1.2);
+}
+
+.projeto-card:active {transform: translateY(0);}
+
+.fundo-imagem-card {
+    overflow: hidden;
+}
+
+.fundo-imagem-card img {
+    transition: all 0.3s ease;
+}
+
+.fundo-imagem-card img:hover {
+    transform: scale(1.2);
+}
+
+.projeto-card h3 {
+    font-weight: bold;
+    margin: 0.937rem 0.937rem;
+}
+
+.descricao-projeto-card {
+    color: var(--cor-descricao);
+    padding: 0;
+    font-size: 0.75rem;
+    margin: 0.937rem 0.937rem;
+}
+
+.secao-tags {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0.937rem 0.937rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 2px 5px;
+    border-radius: 0.625rem;
+    margin: 0 0.313rem 0 0;
+    color: var(--cor1);
+    background-color: rgb(from var(--cor1) r g b / 0.05);
+}
+
+.abrir-btn{
+    color: var(--cor2);
+    background-color: var(--cor1);
+    margin: 0 0.937rem 0.937rem;
+}
 
 /*trocar fundo do site para algo no estilo section {
     background: radial-gradient(circle at center, rgba(57, 255, 21, 0.05) 0%, #080808 80%);
