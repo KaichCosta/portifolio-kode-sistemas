@@ -267,7 +267,6 @@ section {
     text-align: center;
     margin: 1rem;
 }
-#inicio, #tecnologias {display: none;}
 
 #secao-projetos-cards {
     width: 100%;
@@ -332,6 +331,64 @@ section {
     color: var(--cor2);
     background-color: var(--cor1);
     margin: 0 0.937rem 0.937rem;
+}
+
+#inicio,#sobre, #tecnologias, #projetos {display: none;}
+
+#formulario {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    margin: 6rem 0 2rem;
+}
+
+#formulario label {font-weight: bold;}
+
+#formulario input {
+    width: 18.75rem;
+    padding: 5px;
+    border-radius: 0.625rem;
+    border: 2px solid rgb(from var(--cor1) r g b / 0.2);
+    background-color: rgb(from var(--cor2) r g b / 0.3);
+    font-size: 0.75rem;
+    margin: 0.313rem 0 0.937rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#formulario input:hover {
+    filter: brightness(1.2);
+    transform: scaleY(1.1);
+}
+
+#formulario textarea {
+    width: 18.75rem;
+    padding: 5px;
+    border-radius: 0.625rem;
+    border: 2px solid rgb(from var(--cor1) r g b / 0.2);
+    background-color: rgb(from var(--cor2) r g b / 0.3);
+    font-size: 0.75rem;
+    margin: 0.313rem 0 0.937rem;
+    resize: vertical;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#formulario textarea:hover {
+    filter: brightness(1.2);
+    transform: scaleY(1.1);
+}
+
+#enviar-btn {
+    background-color: var(--cor1);
+}
+
+#rodape {
+    text-align: center;
+    padding: 0.625rem;
 }
 
 /*trocar fundo do site para algo no estilo section {
