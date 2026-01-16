@@ -66,23 +66,69 @@
 
 #nav-menu-mobile a {margin-right: 0; padding: 0.2rem 0;}
 
-.container {background-color: var(--cor2);}
+.container {
+    background-color: var(--cor2);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.orbe {
+    position: fixed;
+    width: clamp(300px, 30vw, 600px); 
+    height: clamp(300px, 30vw, 600px);
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+    opacity: 0.12; 
+    pointer-events: none; 
+    will-change: transform;
+}
+
+.orbe-1 {
+    top: -15%;
+    left: -10%;
+    background: var(--cor1);
+    animation: aurora-float 10s infinite alternate ease-in-out;
+}
+
+.orbe-2 {
+    top: 30%;
+    left: 30%;
+    background: #4dff88;
+    opacity: 0.2;
+    animation: aurora-float 7s infinite alternate ease-in-out;
+}
+
+.orbe-3 {
+    bottom: -10%;
+    right: -5%;
+    background: var(--cor1);
+    opacity: 0.16;
+    animation: aurora-float 13s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes aurora-float{
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(80px, 60px) rotate(15deg); }
+}
 
 section {
-    background-color: var(--cor2);
+    background-color: transparent;
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 7.5rem 8rem;
     min-height: 100vh;
+    z-index: 1;
 }
 
 #inicio {
-    background-image: linear-gradient(to bottom,
-    rgb(from var(--cor1) r g b / 0) 0%,
-    rgb(from var(--cor1) r g b / 0.25) 50%,
-    rgb(from var(--cor1) r g b / 0) 100%);
     padding: 7.5rem 4rem;
     flex-direction: row;
 }
@@ -167,10 +213,6 @@ section {
 /*============================================*/
 
 #sobre {
-    background-image: linear-gradient(to right,
-    rgb(from var(--cor1) r g b / 0) 0%,
-    rgb(from var(--cor1) r g b / 0.25) 50%,
-    rgb(from var(--cor1) r g b / 0) 100%);
     justify-content: center;
     margin: auto;
 }
@@ -333,7 +375,7 @@ section {
     margin: 0 0.937rem 0.937rem;
 }
 
-#inicio,#sobre, #tecnologias, #projetos {display: none;}
+.secao-contatos {height: auto;}
 
 #formulario {
     width: auto;
@@ -357,6 +399,11 @@ section {
     margin: 0.313rem 0 0.937rem;
     transition: all 0.3s ease;
     cursor: pointer;
+
+}
+#formulario::placeholder {
+    color: #27c93f;
+
 }
 
 #formulario input:hover {
@@ -390,13 +437,6 @@ section {
     text-align: center;
     padding: 0.625rem;
 }
-
-/*trocar fundo do site para algo no estilo section {
-    background: radial-gradient(circle at center, rgba(57, 255, 21, 0.05) 0%, #080808 80%);
-}*/
-
-
-
 
 @media (max-width: 450px) {
     #cabecalho {display: none;}
