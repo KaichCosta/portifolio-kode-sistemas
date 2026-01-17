@@ -183,26 +183,48 @@ section {
 
 .janela-terminal {
     background: rgb(from var(--cor2) r g b / 0.7);
-    border-radius: 12px;
+    border-radius: 0.75rem;
     font-family: 'Fira Code', monospace;
     overflow: hidden;
-    width: 382px;
+    max-width: 23.875rem;
+    width: 100%;
     margin: 0 auto;
 }
 
 .cabecalho-terminal {
     background: rgb(from var(--cor2) r g b / 0.9);
-    padding: 10px;
+    padding: 0.625rem;
     display: flex;
     align-items: center;
 }
 
-.ponto { height: 10px; width: 10px; border-radius: 50%; margin-right: 6px; }
+.ponto { height: 0.625rem; width: 0.625rem; border-radius: 50%; margin-right: 0.375rem; }
 .vermelho { background: #ff5f56; }
 .amarelo { background: #ffbd2e; }
 .verde { background: #27c93f; }
 
-.corpo-terminal { padding: 20px; color: #bdbdbd; font-size: 14px; }
+.corpo-terminal { 
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem; color: #bdbdbd;
+    font-size: 14px;
+    min-height: 14.398rem;
+}
+.cursor {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.937rem;
+    background-color: var(--cor1);
+    /*margin-left: 0.313rem;*/
+    animation: blink 0.8s infinite;
+    /*vertical-align: middle;*/
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .titulo-terminal { color: #f5f5f5; }
 .comando { color: var(--cor1); }
 .sucesso { color: var(--cor1); font-weight: bold; }
