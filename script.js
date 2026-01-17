@@ -16,6 +16,38 @@ navLinks.forEach(link => {
     });
 });
 
+async function rotacionarTexto() {
+    const span = document.querySelector('.profissao');
+    const palavras = [
+        "Desenvolvedor Full Stack",
+        "Programador Web",
+        "Resolvedor de Problemas",
+        "Especialista em Landing Pages",
+        "Criador de Soluções Digitais"
+    ];
+    
+    let i = 0;
+
+    while (true) {
+        let palavraAtual = palavras[i];
+        
+        for (let char of palavraAtual) {
+            span.textContent += char;
+            await sleep(100);
+        }
+
+        await sleep(2000);
+
+        for (let j = palavraAtual.length; j >= 0; j--) {
+            span.textContent = palavraAtual.substring(0, j);
+            await sleep(50);
+        }
+
+        i = (i + 1) % palavras.length;
+        await sleep(500);
+    }
+}
+
 const corpoTerminal = document.getElementById('corpo-terminal');
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -69,4 +101,4 @@ async function iniciarTerminal() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', iniciarTerminal);
+document.addEventListener('DOMContentLoaded', () => {rotacionarTexto(); iniciarTerminal();});
