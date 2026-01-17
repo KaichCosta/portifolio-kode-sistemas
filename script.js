@@ -102,3 +102,30 @@ async function iniciarTerminal() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {rotacionarTexto(); iniciarTerminal();});
+
+
+
+const botaoEnvio = document.querySelector('#enviar-btn').addEventListener('click', function () {
+    const nomeCliente = document.querySelector('#nome').value;
+    console.log(nomeCliente) 
+
+    const assuntoCliente = document.querySelector('#assunto').value;
+    console.log(assuntoCliente)
+
+    const mensagemCliente = document.querySelector('#mensagem').value;
+    console.log(mensagemCliente)
+
+    if (!nomeCliente || !assuntoCliente|| !mensagemCliente) {
+        alert("Por favor, preencha todos os campos antes de enviar.");
+        return;
+    }
+
+    const meuContato = "5537998460473"
+
+    const textoFormatado = `Oi! Me chamo *${nomeCliente}* quero falar sobre *${assuntoCliente}*, o detalhe é: "${mensagemCliente}"%0A%0A` +
+                            `Aguardo seu retorno para alinharmos os detalhes!`;
+    const url = `https://wa.me/${meuContato}?text=${encodeURIComponent(textoFormatado)}`;
+
+    window.open(url, '_blank');
+});
+

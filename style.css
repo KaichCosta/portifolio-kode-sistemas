@@ -36,6 +36,8 @@
     z-index: 100;  
     border: none;
     box-shadow: none;
+    -webkit-backdrop-filter: blur(5px); /*glass*/
+    backdrop-filter: blur(5px); /*glass*/
 }
 
 #cabecalho-mobile img {max-width: 80px;}
@@ -52,6 +54,9 @@
     text-align: center;
     border: none;
     box-shadow: 0 15px 15px 0 rgb(from var(--cor1) r g b / 0.1);
+    -webkit-backdrop-filter: blur(5px); /*glass*/
+    backdrop-filter: blur(5px); /*glass*/
+
 }
 
 #nav-menu-mobile.active {
@@ -398,7 +403,8 @@ section {
 .secao-contatos {height: auto;}
 
 #formulario {
-    width: auto;
+    width: 100%;
+    max-width: 21.25rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -410,7 +416,7 @@ section {
 #formulario label {font-weight: bold;}
 
 #formulario input {
-    width: 18.75rem;
+    width: 100%;
     padding: 5px;
     border-radius: 0.625rem;
     border: 2px solid rgb(from var(--cor1) r g b / 0.2);
@@ -419,26 +425,28 @@ section {
     margin: 0.313rem 0 0.937rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    color: var(--cor-texto);
 
 }
 #formulario input::placeholder {color: var(--cor-descricao);}
 
 #formulario input:hover {
     filter: brightness(1.2);
-    transform: scaleY(1.1);
+    border-color: rgb(from var(--cor1) r g b / 0.5);
 }
 
+
 #formulario textarea {
-    width: 18.75rem;
+    width: 100%;
     padding: 5px;
     border-radius: 0.625rem;
     border: 2px solid rgb(from var(--cor1) r g b / 0.2);
     background-color: rgb(from var(--cor2) r g b / 0.3);
-
     margin: 0.313rem 0 0.937rem;
     resize: vertical;
     transition: all 0.3s ease;
     cursor: pointer;
+    color: var(--cor-texto);
 }
 
 #formulario textarea::placeholder {
@@ -448,7 +456,7 @@ section {
 
 #formulario textarea:hover {
     filter: brightness(1.2);
-    transform: scaleY(1.1);
+    border-color: rgb(from var(--cor1) r g b / 0.5);
 }
 
 #enviar-btn {
