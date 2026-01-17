@@ -393,6 +393,8 @@ section {
     margin: 0 0.937rem 0.937rem;
 }
 
+.codigo-btn {color: var(--cor-texto);}
+
 .secao-contatos {height: auto;}
 
 #formulario {
