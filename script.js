@@ -21,48 +21,52 @@ const corpoTerminal = document.getElementById('corpo-terminal');
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function iniciarTerminal() {
-    // 1. Limpa o terminal antes de começar
-    corpoTerminal.innerHTML = '';
 
-    // 2. Cria a linha do comando inicial
-    const linhaComando = document.createElement('div');
-    linhaComando.innerHTML = `<span class="comando">$</span> <span id="typing"></span><span class="cursor"></span>`;
-    corpoTerminal.appendChild(linhaComando);
+    while (true){
+        corpoTerminal.innerHTML = '';
 
-    const spanTyping = document.getElementById('typing');
-    const comandoTexto = "npx kode-sistemas criador-de-paginas";
-    for (let char of comandoTexto) {
-        spanTyping.textContent += char;
-        await sleep(100); // Velocidade da digitação
-    }
+        const linhaComando = document.createElement('div');
+        linhaComando.innerHTML = `<span class="comando">$</span> <span id="typing"></span><span class="cursor"></span>`;
+        corpoTerminal.appendChild(linhaComando);
 
-    await sleep(800);
-    
-    const logs = [
-        { texto: "... Analisando nicho do cliente", delay: 1000 },
-        { texto: "... Gerando estrutura semântica HTML5", delay: 800 },
-        { texto: "... Aplicando estilização responsiva", delay: 800 },
-        { texto: "... [✓] Performance: 100/100 | SEO: 100/100", delay: 800 },
-        { texto: "... Fazendo deploy para ambiente de produção", delay: 800 },
-        { texto: "[✓] Estrutura finalizada com sucesso!", classe: "sucesso", delay: 500 },
-        { texto: "$ _", classe: "sucesso", delay: 1000 }
-    ];
-
-document.querySelector('.cursor').remove();
-for (const log of logs) {
-        const p = document.createElement('p');
-        p.style.marginTop = "8px";
-        p.textContent = log.texto;
+        const spanTyping = document.getElementById('typing');
+        const comandoTexto = "npx kode-sistemas criador-de-paginas";
         
-        if (log.classe) {
-            p.classList.add(log.classe);
+        for (let char of comandoTexto) {
+            spanTyping.textContent += char;
+            await sleep(100); // Velocidade da digitação
         }
 
-        corpoTerminal.appendChild(p);
-        await sleep(log.delay);
+        await sleep(800);
+        
+        const logs = [
+            { texto: "... Analisando nicho do cliente", delay: 1000 },
+            { texto: "... Gerando estrutura semântica HTML5", delay: 800 },
+            { texto: "... Aplicando estilização responsiva", delay: 800 },
+            { texto: "... [✓] Performance: 100/100 | SEO: 100/100", delay: 800 },
+            { texto: "... Fazendo deploy para ambiente de produção", delay: 800 },
+            { texto: "[✓] Projeto finalizado com sucesso!", classe: "sucesso", delay: 500 },
+            { texto: "$ _", classe: "sucesso", delay: 1000 }
+        ];
+
+    document.querySelector('.cursor').remove();
+
+    for (const log of logs) {
+            const p = document.createElement('p');
+            p.style.marginTop = "8px";
+            p.textContent = log.texto;
+            
+            if (log.classe) {
+                p.classList.add(log.classe);
+            }
+
+            corpoTerminal.appendChild(p);
+            await sleep(log.delay);
+        }
+
+        await sleep(5000);
+
     }
 }
-
-
 
 document.addEventListener('DOMContentLoaded', iniciarTerminal);
