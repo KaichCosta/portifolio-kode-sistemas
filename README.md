@@ -2,7 +2,7 @@
 
 Uma landing page premium desenvolvida para prestação de serviços de desenvolvimento web, focada em performance, estética neon e experiência do usuário (UX).
 
-## 🎨 Visual & Experience
+## 🎨 Visual & Experiência
 O projeto utiliza uma estética **Cyberpunk/Glassmorphism**, com elementos flutuantes, transparências inteligentes e iluminação através de orbes animadas (Aurora Boreal Tech).
 
 - **Glow Radial & Orbes**: Efeito de iluminação dinâmica com `position: fixed` para profundidade durante o scroll.
@@ -26,6 +26,8 @@ A página foi otimizada para:
 - **Tablet/Mobile**: Menu hambúrguer personalizado e grid adaptativo para 1 ou 2 colunas.
 
 ## 🚀 Como visualizar
+1. Acesse o link do projeto <https://kodesistemas.netlify.app/>
+- Ou se preferir
 1. Clone o repositório.
 2. Abra o arquivo `index.html` em seu navegador.
 3. (Opcional) Utilize a extensão *Live Server* no VS Code para atualizações em tempo real.
