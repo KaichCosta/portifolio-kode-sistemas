@@ -467,6 +467,7 @@ section {
 }
 
 #enviar-btn {
+    color: var(--cor2) !important;
     background-color: var(--cor1);
     -webkit-appearance: none;
     -moz-appearance: none;
