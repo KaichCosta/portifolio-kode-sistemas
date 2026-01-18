@@ -122,8 +122,11 @@ const botaoEnvio = document.querySelector('#enviar-btn').addEventListener('click
 
     const meuContato = "5537998460473"
 
-    const textoFormatado = `Oi! Me chamo *${nomeCliente}* quero falar sobre *${assuntoCliente}*, o detalhe é: "${mensagemCliente}"%0A%0A` +
-                            `Aguardo seu retorno para alinharmos os detalhes!`;
+    const textoFormatado = `Oi! Me chamo *${nomeCliente}*
+Quero falar sobre *${assuntoCliente}*
+O detalhe é: "${mensagemCliente}"
+
+Aguardo seu retorno para alinharmos os detalhes!`;
     const url = `https://wa.me/${meuContato}?text=${encodeURIComponent(textoFormatado)}`;
 
     window.open(url, '_blank');

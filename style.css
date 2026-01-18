@@ -435,6 +435,13 @@ section {
     border-color: rgb(from var(--cor1) r g b / 0.5);
 }
 
+#formulario input:focus, 
+#formulario textarea:focus,
+#enviar-btn:focus {
+    outline: none;
+    border-color: rgb(from var(--cor1) r g b / 0.5);
+    box-shadow: 0 0 10px rgb(from var(--cor1) r g b / 0.5);
+}
 
 #formulario textarea {
     width: 100%;
@@ -461,6 +468,9 @@ section {
 
 #enviar-btn {
     background-color: var(--cor1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 #rodape {
